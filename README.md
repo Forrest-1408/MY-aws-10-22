@@ -1,1 +1,1 @@
-# MY-aws-10-22
+# my-projects
