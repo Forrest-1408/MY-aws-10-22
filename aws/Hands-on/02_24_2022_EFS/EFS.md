@@ -1,4 +1,3 @@
-cd ..
 # Hands-on EFS-01 : How to Create EFS & Attach the EFS to the multiple EC2 Linux 2 Instances
 
 ## Outline
@@ -91,7 +90,7 @@ Virtual Private Cloud (VPC)     : Default VPC (Keep default)
 Availability and Durability     : Regional (Keep default)
 ```
 
-- To customize settings manually, select the "Customize" option seen at the bottom 
+- To customize settings manually, select the 'Customize' option seen at the bottom 
 
 ```text
 
@@ -152,6 +151,13 @@ ssh -i .....pem ec2-user@..................
 ```text
 sudo yum update -y
 ```
+- Change the hostname 
+
+```text
+sudo hostnamectl set-hostname First
+```
+
+- Exit and reconnect to the instance to see new hostname.
 
 - Install the "Amazon-efs-utils Package" on Amazon Linux
 
@@ -207,6 +213,12 @@ ssh -i .....pem ec2-user@..................
 ```text
 sudo yum update -y
 ```
+- Change the hostname 
+
+```text
+sudo hostnamectl set-hostname Second
+```
+- Exit and reconnect to the instance to see new hostname.
 
 - Install the "Amazon-efs-utils Package" on Amazon Linux
 
@@ -283,6 +295,12 @@ Tag             :
     Value       : EC2-3
 ```
 - Connect to EC2-3 with SSH
+
+- Change the hostname 
+
+```text
+sudo hostnamectl set-hostname Third
+```
 
 ```text
 ssh -i .....pem ec2-user@..................
